@@ -1,55 +1,65 @@
-<!-- Before submitting an issue, please consult our docs (https://ionicframework.com/docs/) and API reference (https://ionicframework.com/docs/api/) -->
-
-<!-- Please make sure you are posting an issue pertaining to the Ionic Framework. If you are having an issue with the Ionic Appflow services (Ionic View, Ionic Deploy, etc.) please consult the Ionic Appflow support portal (https://ionic.zendesk.com/hc/en-us) -->
-
-<!-- Please do not submit support requests or "How to" questions here. Instead, please use one of these channels: https://forum.ionicframework.com/ or https://ionic.link/discord/ -->
-
-<!-- ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION. -->
-
-**Ionic version:**
-<!-- (For Ionic 1.x issues, please use https://github.com/ionic-team/ionic-v1) -->
-<!-- (For Ionic 2.x & 3.x issues, please use https://github.com/ionic-team/ionic-v3) -->
-[x] **4.x**
-[ ] **5.x**
-
-**I'm submitting a ...** 
-<!--  (check one with "x") -->
-[ ] bug report
-[ ] feature request
-
-<!-- Please do not submit support requests or "How to" questions here. Instead, please use one of these channels: https://forum.ionicframework.com/ or https://ionic.link/discord -->
-
-**Current behavior:**
-<!-- Describe how the bug manifests. -->
-
-**Expected behavior:**
-<!-- Describe what the behavior would be without the bug. -->
-
-**Steps to reproduce:**
-<!--  Please explain the steps required to duplicate the issue, especially if you are able to provide a sample application. -->
-
-**Related code:**
-
-<!-- If you are able to illustrate the bug or feature request with an example, please provide a sample application via one of the following means:
-
-A sample application via GitHub
-
-StackBlitz (https://stackblitz.com)
-
-Plunker (http://plnkr.co/edit/cpeRJs?p=preview)
-
--->
-
-```
-insert short code snippets here
-```
-
-**Other information:**
-<!-- List any other information that is relevant to your issue. Stack traces, related issues, suggestions on how to fix, Stack Overflow links, forum links, etc. -->
-
-**Ionic info:** 
-<!-- (run `ionic info` from a terminal/cmd prompt and paste output below): -->
-
-```
-insert the output from ionic info here
-```
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
